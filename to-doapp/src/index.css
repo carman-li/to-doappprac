@@ -1,10 +1,55 @@
 body {
   font-family: 'Lora', serif;
-  margin: 3vw;
+  margin: 4vw;
   color: #555273;
+  overflow-x: hidden;
+}
+
+#logo {
+  max-width: 10vw;
+  margin: 2vw auto 2vw auto;
+  display: block;
 }
 
 h1 {
+  display: none;
+}
+
+.listTitle {
+  margin: 2vw 0;
+  padding: 1vw;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 3vw;
+  color: #555273;
+}
+
+input {
+  border: none;
+  max-width: 80vw;
+  overflow: none;
+}
+
+input:focus, input:hover {
+  outline: none;
+  border-bottom: 3px solid #555273;
+}
+
+/* for larger screens */
+
+@media only screen and (min-width: 1025px) {
+  #logo {
+    max-width: 3.5vw;
+    margin: 1vw;
+    display: inline;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 1.5vw;
+    display: inline;
+    vertical-align: middle;
+  }
+  .listTitle {
+    padding: 0.5vw;
+    font-size: 2vw;
+  }
 }

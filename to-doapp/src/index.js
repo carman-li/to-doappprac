@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Header from "./Header";
+import Container from "./Container";
 
 ReactDOM.render(
   <div className="container-fluid">
     <div className="row">
       <div className="col">
-        <Header />
+        <Container />
       </div>
     </div>
   </div>,
