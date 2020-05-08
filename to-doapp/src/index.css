@@ -23,13 +23,13 @@ h1 {
   color: #555273;
 }
 
-input {
+textarea {
   border: none;
-  max-width: 80vw;
-  overflow: none;
+  resize: none;
+  width: 100%;
 }
 
-input:focus, input:hover {
+textarea:focus, textarea:hover {
   outline: none;
   border-bottom: 3px solid #555273;
 }
@@ -48,7 +48,7 @@ input:focus, input:hover {
     display: inline;
     vertical-align: middle;
   }
-  .listTitle {
+  textarea {
     padding: 0.5vw;
     font-size: 2vw;
   }
