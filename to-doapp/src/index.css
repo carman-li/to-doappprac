@@ -29,6 +29,10 @@ textarea {
   width: 100%;
 }
 
+textarea::placeholder {
+  color: #DAD5E2;
+}
+
 textarea:focus, textarea:hover {
   outline: none;
   border-bottom: 3px solid #555273;
