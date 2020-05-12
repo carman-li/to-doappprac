@@ -7,6 +7,9 @@ class EditText extends Component {
     this.state = {
       text: "",
       editClassName: props.editClassName,
+      placeholder: props.placeholder,
+      maxLength: props.maxLength,
+      rows: props.rows,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -18,16 +21,19 @@ class EditText extends Component {
 
   render() {
     return (
-      <textarea
-        name="text"
-        type="text"
-        placeholder="List Title Here"
-        maxLength="115"
-        rows="3"
-        className={this.state.editClassName}
-        value={this.state.text}
-        onChange={this.handleChange}
-      ></textarea>
+      <div className="textAreaContainer">
+        <textarea
+          name="text"
+          type="text"
+          align="bottom"
+          placeholder={this.state.placeholder}
+          maxLength={this.state.maxLength}
+          rows={this.state.rows}
+          className={this.state.editClassName}
+          value={this.state.text}
+          onChange={this.handleChange}
+        ></textarea>
+      </div>
     );
   }
 }

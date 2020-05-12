@@ -8,12 +8,25 @@ class Body extends Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col title">
-            <EditText editClassName="listTitle"></EditText>
+            <EditText
+              editClassName="listTitle"
+              placeholder="List Title Here"
+              maxLength="115"
+              rows="3"
+            ></EditText>
           </div>
         </div>
-        <div className="row">
-          <div className="col">
+        <div className="form-row">
+          <div className="col-1 checkboxContainer">
             <CheckBox editClassName="checkbox"></CheckBox>
+          </div>
+          <div className="col itemContainer">
+            <EditText
+              editClassName="item"
+              placeholder="List Item Here"
+              maxLength="50"
+              rows="1"
+            ></EditText>
           </div>
         </div>
       </div>

@@ -35,7 +35,20 @@ textarea::placeholder {
 
 textarea:focus, textarea:hover {
   outline: none;
-  border-bottom: 3px solid #555273;
+  /* border-bottom: 3px solid #555273; */
+}
+
+.checkboxContainer {
+  padding-right: 0;
+}
+
+.itemContainer {
+  padding-left: 0;
+}
+
+.item {
+  width: 80%;
+  font-size: 1.5vw;
 }
 
 /* for larger screens */
@@ -55,5 +68,9 @@ textarea:focus, textarea:hover {
   textarea {
     padding: 0.5vw;
     font-size: 2vw;
+  }
+  .item {
+    width: 90%;
+    font-size: 1.5vw;
   }
 }

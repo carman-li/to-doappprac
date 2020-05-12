@@ -1,5 +1,9 @@
 import React, { Component } from "react";
+import CheckBoxIcon from "@material-ui/icons/CheckBox";
+import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import Checkbox from "@material-ui/core/Checkbox";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
+import MyTheme from "./MyTheme";
 
 class CheckBox extends Component {
   constructor(props) {
@@ -7,6 +11,7 @@ class CheckBox extends Component {
 
     this.state = {
       checked: false,
+      editClassName: props.editClassName,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,13 +27,16 @@ class CheckBox extends Component {
 
   render() {
     return (
-      <div>
+      <MuiThemeProvider theme={MyTheme}>
         <Checkbox
+          className="checkbox"
           checked={this.state.checked}
           onChange={this.handleChange}
-          className="checkbox"
+          color="primary"
+          icon={<CheckBoxOutlineBlankIcon style={{ fontSize: 40 }} />}
+          checkedIcon={<CheckBoxIcon style={{ fontSize: 40 }} />}
         ></Checkbox>
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
